@@ -1,36 +1,22 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Syringe, Lips, Hair } from "lucide-react";
 
 const services = [
   {
-    icon: "✨",
-    title: "Limpeza de Pele",
-    description: "Tratamento completo que remove impurezas e desobstrui os poros, deixando sua pele limpa e radiante."
+    icon: <Lips className="w-10 h-10 text-clinic-accent" />,
+    title: "Preenchimento Labial",
+    description: "Procedimento que proporciona volume e contorno aos lábios, criando um aspecto mais harmonioso e jovial ao rosto."
   },
   {
-    icon: "💉",
-    title: "Preenchimento Facial",
-    description: "Restaura o volume perdido e suaviza linhas de expressão para uma aparência mais jovem e natural."
+    icon: <Syringe className="w-10 h-10 text-clinic-accent" />,
+    title: "Botox",
+    description: "Tratamento que suaviza linhas de expressão e rugas, proporcionando um aspecto mais jovem e natural para a pele."
   },
   {
-    icon: "🔍",
-    title: "Microagulhamento",
-    description: "Estimula a produção de colágeno, melhorando a textura da pele e reduzindo cicatrizes e estrias."
-  },
-  {
-    icon: "🌞",
-    title: "Peeling Químico",
-    description: "Remove camadas superficiais da pele, tratando manchas, acne e sinais de envelhecimento."
-  },
-  {
-    icon: "⚡",
-    title: "Radiofrequência",
-    description: "Tratamento que combate a flacidez e melhora o contorno facial e corporal sem cirurgia."
-  },
-  {
-    icon: "💧",
-    title: "Hidratação Profunda",
-    description: "Restaura a umidade natural da pele, devolvendo maciez e elasticidade."
+    icon: <Hair className="w-10 h-10 text-clinic-accent" />,
+    title: "Tratamento Capilar",
+    description: "Terapias avançadas para fortalecer os fios, reduzir a queda e promover o crescimento saudável dos cabelos."
   }
 ];
 
@@ -44,15 +30,15 @@ const ServicesSection = () => {
           </h2>
           <div className="h-1 w-20 bg-clinic-accent mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-xl mx-auto">
-            Oferecemos os mais modernos procedimentos estéticos, realizados por profissionais qualificados para garantir resultados excepcionais.
+            Oferecemos procedimentos estéticos especializados, realizados por profissionais qualificados para garantir resultados excepcionais.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow border border-gray-100">
-              <CardHeader>
-                <div className="text-4xl mb-4">{service.icon}</div>
+            <Card key={index} className="hover:shadow-lg transition-shadow border border-gray-100 text-center">
+              <CardHeader className="flex flex-col items-center">
+                <div className="mb-4">{service.icon}</div>
                 <CardTitle className="text-xl font-serif text-clinic-dark">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
