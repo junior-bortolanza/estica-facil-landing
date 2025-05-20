@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <h1 className="font-serif text-2xl font-bold text-clinic-dark">
-            <span className="text-clinic-accent">Bella</span> Estética
+            <span className="text-clinic-accent">Dra Camila</span> Vieira
           </h1>
         </div>
         

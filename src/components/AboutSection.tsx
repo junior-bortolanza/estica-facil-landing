@@ -17,7 +17,7 @@ const AboutSection = () => {
           
           <div className="w-full md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-clinic-dark mb-6">
-              Sobre a <span className="text-clinic-accent">Bella Estética</span>
+              Sobre <span className="text-clinic-accent">Dra Camila Vieira</span>
             </h2>
             <div className="h-1 w-20 bg-clinic-accent mb-6"></div>
             <p className="text-gray-600 mb-6 text-lg">
