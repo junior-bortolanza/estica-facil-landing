@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Syringe, Sparkles, Scissors, ZapIcon, Heart } from "lucide-react";
+import { Syringe, Sparkles, Needle, ZapIcon, Heart } from "lucide-react";
 
 const services = [
   {
@@ -14,7 +14,7 @@ const services = [
     description: "Tratamento que estimula a produção natural de colágeno, melhorando a firmeza e elasticidade da pele."
   },
   {
-    icon: <Scissors className="w-10 h-10 text-[#6B7763]" />,
+    icon: <Needle className="w-10 h-10 text-[#6B7763]" />,
     title: "Microagulhamento",
     description: "Técnica que estimula a renovação celular e produção de colágeno através de micro perfurações na pele."
   },
