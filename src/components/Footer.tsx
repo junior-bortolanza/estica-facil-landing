@@ -1,4 +1,3 @@
-
 const Footer = () => {
   return (
     <footer id="contato" className="bg-[#6B7763] text-white pt-16 pb-8">
@@ -6,7 +5,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
             <h3 className="font-serif text-xl font-bold mb-6">
-              <span className="text-[#D2CAC8]">Dra.</span> Camila Vieira
+              Dra. Camila Vieira
             </h3>
             <p className="mb-4 text-gray-100">
               Realçando sua beleza natural com tratamentos personalizados e resultados surpreendentes.
