@@ -41,7 +41,7 @@ const Navbar = () => {
         
         <Button 
           variant="default" 
-          className="hidden md:block bg-clinic-accent hover:bg-clinic-accent/90 text-white"
+          className="hidden md:block bg-clinic-accent hover:bg-clinic-dark text-white"
           onClick={() => document.getElementById('agendar')?.scrollIntoView({ behavior: 'smooth' })}
         >
           Agendar Consulta

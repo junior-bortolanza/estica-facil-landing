@@ -54,10 +54,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				clinic: {
-					light: '#F0F7FF',
-					DEFAULT: '#A8D0FF',
-					dark: '#5E92C7',
-					accent: '#FF9EBC',
+					light: '#e8ece2',
+					DEFAULT: '#a6ad97',
+					dark: '#7e8472',
+					accent: '#a6ad97',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
