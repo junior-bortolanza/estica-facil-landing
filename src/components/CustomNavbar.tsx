@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
 
 const CustomNavbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -33,9 +34,7 @@ const CustomNavbar = () => {
             to="/"
             className="text-xl md:text-2xl font-serif font-bold"
           >
-            <span className={`transition-colors duration-300 ${
-              isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
-            }`}>
+            <span className={`transition-colors duration-300 text-[#4B7F52]`}>
               Dra. Camila Vieira
             </span>
           </Link>
@@ -82,14 +81,13 @@ const CustomNavbar = () => {
             >
               Contato
             </Link>
-            <a
-              href="tel:+5511555555555"
-              className={`font-medium hover:text-[#D2CAC8] transition-colors ${
-                isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
-              }`}
+            <Button 
+              variant="outline"
+              className="border-[#6B7763] text-[#6B7763] hover:bg-[#6B7763] hover:text-white transition-colors font-medium"
+              onClick={() => window.location.href = '/#contato'}
             >
-              (11) 5555-5555
-            </a>
+              Agendar consulta
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -156,12 +154,16 @@ const CustomNavbar = () => {
               >
                 Contato
               </Link>
-              <a
-                href="tel:+5511555555555"
-                className="text-[#6B7763] font-medium hover:text-[#D2CAC8] transition-colors"
+              <Button 
+                variant="outline"
+                className="border-[#6B7763] text-[#6B7763] hover:bg-[#6B7763] hover:text-white transition-colors font-medium w-full"
+                onClick={() => {
+                  window.location.href = '/#contato';
+                  setIsMobileMenuOpen(false);
+                }}
               >
-                (11) 5555-5555
-              </a>
+                Agendar consulta
+              </Button>
             </div>
           </div>
         )}
