@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Syringe, Droplet, Microscope, Laser } from "lucide-react";
+import { Syringe, Droplet, Microscope, Zap } from "lucide-react";
 
 const services = [
   {
@@ -24,7 +24,7 @@ const services = [
     description: "Procedimento que estimula a renovação celular e a produção de colágeno através de micro perfurações na pele."
   },
   {
-    icon: <Laser className="w-10 h-10 text-clinic-accent" />,
+    icon: <Zap className="w-10 h-10 text-clinic-accent" />,
     title: "Tecnologias",
     description: "Ultraformer e Lavieen, tecnologias avançadas para tratamentos faciais e corporais com resultados superiores."
   }
