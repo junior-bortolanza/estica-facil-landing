@@ -1,22 +1,27 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Syringe, Lips, Scissors } from "lucide-react";
+import { Syringe, Scissors } from "lucide-react";
 
 const services = [
   {
-    icon: <Lips className="w-10 h-10 text-clinic-accent" />,
-    title: "Preenchimento Labial",
-    description: "Procedimento que proporciona volume e contorno aos lábios, criando um aspecto mais harmonioso e jovial ao rosto."
-  },
-  {
     icon: <Syringe className="w-10 h-10 text-clinic-accent" />,
-    title: "Botox",
-    description: "Tratamento que suaviza linhas de expressão e rugas, proporcionando um aspecto mais jovem e natural para a pele."
+    title: "Preenchimentos Faciais",
+    description: "Labial, olheira, mento, malar, mandíbula, rinomodelação para harmonização e rejuvenescimento facial."
   },
   {
     icon: <Scissors className="w-10 h-10 text-clinic-accent" />,
-    title: "Tratamento Capilar",
-    description: "Terapias avançadas para fortalecer os fios, reduzir a queda e promover o crescimento saudável dos cabelos."
+    title: "Bioestimulador de Colágeno",
+    description: "Tratamento que estimula a produção natural de colágeno, melhorando a firmeza e elasticidade da pele."
+  },
+  {
+    icon: <Syringe className="w-10 h-10 text-clinic-accent" />,
+    title: "Microagulhamento",
+    description: "Técnica que estimula a renovação celular e produção de colágeno através de micro perfurações na pele."
+  },
+  {
+    icon: <Scissors className="w-10 h-10 text-clinic-accent" />,
+    title: "Tecnologias",
+    description: "Ultraformer e Lavieen: equipamentos avançados para lifting não-cirúrgico e rejuvenescimento da pele."
   }
 ];
 
@@ -34,7 +39,7 @@ const ServicesSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow border border-gray-100 text-center">
               <CardHeader className="flex flex-col items-center">
