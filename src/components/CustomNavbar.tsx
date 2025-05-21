@@ -34,7 +34,7 @@ const CustomNavbar = () => {
             className="text-xl md:text-2xl font-serif font-bold"
           >
             <span className={`transition-colors duration-300 ${
-              isSticky ? "text-[#4B7F52]" : "text-[#4B7F52]"
+              isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
             }`}>
               Dra. Camila Vieira
             </span>
@@ -45,7 +45,7 @@ const CustomNavbar = () => {
             <Link
               to="/#inicio"
               className={`font-medium hover:text-[#D2CAC8] transition-colors ${
-                isSticky ? "text-[#6B7763]" : "text-white"
+                isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
               }`}
             >
               Início
@@ -53,7 +53,7 @@ const CustomNavbar = () => {
             <Link
               to="/#servicos"
               className={`font-medium hover:text-[#D2CAC8] transition-colors ${
-                isSticky ? "text-[#6B7763]" : "text-white"
+                isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
               }`}
             >
               Serviços
@@ -61,7 +61,7 @@ const CustomNavbar = () => {
             <Link
               to="/#sobre"
               className={`font-medium hover:text-[#D2CAC8] transition-colors ${
-                isSticky ? "text-[#6B7763]" : "text-white"
+                isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
               }`}
             >
               Sobre
@@ -69,7 +69,7 @@ const CustomNavbar = () => {
             <Link
               to="/#depoimentos"
               className={`font-medium hover:text-[#D2CAC8] transition-colors ${
-                isSticky ? "text-[#6B7763]" : "text-white"
+                isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
               }`}
             >
               Depoimentos
@@ -77,7 +77,7 @@ const CustomNavbar = () => {
             <Link
               to="/#contato"
               className={`font-medium hover:text-[#D2CAC8] transition-colors ${
-                isSticky ? "text-[#6B7763]" : "text-white"
+                isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
               }`}
             >
               Contato
@@ -85,7 +85,7 @@ const CustomNavbar = () => {
             <a
               href="tel:+5511555555555"
               className={`font-medium hover:text-[#D2CAC8] transition-colors ${
-                isSticky ? "text-[#6B7763]" : "text-white"
+                isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
               }`}
             >
               (11) 5555-5555
@@ -104,7 +104,7 @@ const CustomNavbar = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
               className={`w-6 h-6 transition-colors ${
-                isSticky ? "text-[#6B7763]" : "text-white"
+                isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
               }`}
             >
               <path

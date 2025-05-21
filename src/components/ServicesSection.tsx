@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Syringe, Droplet, Microscope, FlaskRound } from "lucide-react";
+import { Syringe, Sparkles, Scissors, ZapIcon, Heart } from "lucide-react";
 
 const services = [
   {
@@ -9,22 +9,22 @@ const services = [
     description: "Labial, olheira, mento, malar, mandíbula, rinomodelação para harmonização e rejuvenescimento facial."
   },
   {
-    icon: <Droplet className="w-10 h-10 text-[#6B7763]" />,
+    icon: <Sparkles className="w-10 h-10 text-[#6B7763]" />,
     title: "Bioestimulador de Colágeno",
     description: "Tratamento que estimula a produção natural de colágeno, melhorando a firmeza e elasticidade da pele."
   },
   {
-    icon: <Microscope className="w-10 h-10 text-[#6B7763]" />,
+    icon: <Scissors className="w-10 h-10 text-[#6B7763]" />,
     title: "Microagulhamento",
     description: "Técnica que estimula a renovação celular e produção de colágeno através de micro perfurações na pele."
   },
   {
-    icon: <FlaskRound className="w-10 h-10 text-[#6B7763]" />,
+    icon: <ZapIcon className="w-10 h-10 text-[#6B7763]" />,
     title: "Tecnologias",
     description: "Ultraformer e Lavieen: equipamentos avançados para lifting não-cirúrgico e rejuvenescimento da pele."
   },
   {
-    icon: <Droplet className="w-10 h-10 text-[#6B7763]" />,
+    icon: <Heart className="w-10 h-10 text-[#6B7763]" />,
     title: "Mesoterapia Capilar",
     description: "Tratamento especializado para queda de cabelo, fortalecimento dos fios e estímulo ao crescimento capilar."
   }
