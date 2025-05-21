@@ -48,7 +48,7 @@ const ServicesSection = () => {
           </h2>
           <div className="h-1 w-20 bg-[#6B7763] mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-xl mx-auto">
-            Oferecemos procedimentos estéticos especializados, realizados por profissionais qualificados para garantir resultados excepcionais.
+            Oferecemos procedimentos estéticos personalizados, realizados com excelência pela Dra. Camila Vieira para garantir resultados excepcionais.
           </p>
         </div>
         
