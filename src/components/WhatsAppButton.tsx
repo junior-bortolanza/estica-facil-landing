@@ -21,7 +21,7 @@ const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
     // Updated with the correct WhatsApp number
     const whatsappNumber = "5515996978807"; 
-    const message = "Olá! Gostaria de agendar uma consulta na Bella Estética.";
+    const message = "Olá! Gostaria de agendar uma consulta com a Dra Camila Vieira";
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
