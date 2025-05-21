@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -30,7 +29,7 @@ const testimonials = [
     role: "Cliente",
     content: "Profissional incrível! Um trabalho impecável, sempre trazendo os melhores resultados com muito cuidado e dedicação ❤️",
     timeAgo: "3 semanas atrás",
-    image: "/lovable-uploads/ad71728f-4642-45a0-b2dc-06a35cb5cd36.png"
+    image: "/lovable-uploads/739c3376-9614-4053-a6f4-fc40860ff186.png"
   }
 ];
 
@@ -88,6 +87,7 @@ const TestimonialsSection = () => {
                       />
                     </div>
                   )}
+                  
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" strokeWidth="1" className="mx-0.5">
