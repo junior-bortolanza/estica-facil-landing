@@ -34,7 +34,7 @@ const CustomNavbar = () => {
             className="text-xl md:text-2xl font-serif font-bold"
           >
             <span className={`transition-colors duration-300 ${
-              isSticky ? "text-[#6B7763]" : "text-white"
+              isSticky ? "text-[#4B7F52]" : "text-[#4B7F52]"
             }`}>
               Dra. Camila Vieira
             </span>
