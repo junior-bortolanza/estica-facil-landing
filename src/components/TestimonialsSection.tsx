@@ -26,11 +26,11 @@ const testimonials = [
     image: "/lovable-uploads/e2420d6d-758a-42a3-84cb-0220790e1cb3.png"
   },
   {
-    name: "Viviane Alexandre",
+    name: "Adriana Horie",
     role: "Cliente",
-    content: "Simplesmente amei o resultado, fez toda a diferença! A doutora é muito cuidadosa e cuidou de cada detalhe! Super recomendo.",
-    timeAgo: "1 mês atrás",
-    image: "https://lh3.googleusercontent.com/a-/ALV-UjUjqSMXg3g390PQW69Oa0t8zqkvzXF633BUu2lvPsQvXQ=w60-h60-p-rp-mo-br100"
+    content: "Profissional incrível! Um trabalho impecável, sempre trazendo os melhores resultados com muito cuidado e dedicação ❤️",
+    timeAgo: "3 semanas atrás",
+    image: "/lovable-uploads/ad71728f-4642-45a0-b2dc-06a35cb5cd36.png"
   }
 ];
 
@@ -67,8 +67,8 @@ const TestimonialsSection = () => {
             <Card className="border border-gray-100 shadow-lg">
               <CardContent className="pt-10">
                 <div className="flex flex-col items-center text-center p-6">
-                  {activeIndex === 2 ? (
-                    // Usar Avatar (perfeitamente redondo) para Gisele
+                  {activeIndex === 2 || activeIndex === 3 ? (
+                    // Usar Avatar (perfeitamente redondo) para Gisele e Adriana
                     <div className="mb-6">
                       <Avatar className="w-20 h-20">
                         <AvatarImage 
