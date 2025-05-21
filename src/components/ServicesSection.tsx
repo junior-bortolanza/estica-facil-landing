@@ -32,9 +32,13 @@ const services = [
     description: "Ultraformer e Lavieen: equipamentos avançados para lifting não-cirúrgico e rejuvenescimento da pele."
   },
   {
+    type: "carousel",
     icon: <Heart className="w-10 h-10 text-[#6B7763]" />,
     title: "Mesoterapia Capilar",
-    description: "Tratamento especializado para queda de cabelo, fortalecimento dos fios e estímulo ao crescimento capilar."
+    description: "Tratamento especializado para queda de cabelo, fortalecimento dos fios e estímulo ao crescimento capilar.",
+    images: [
+      "/lovable-uploads/93fd07ef-84fc-4eb5-992a-b9dfe0b96ccd.png"
+    ]
   }
 ];
 
@@ -61,7 +65,7 @@ const ServicesSection = () => {
                   <div className="w-full mb-4">
                     <Carousel className="w-full">
                       <CarouselContent>
-                        {service.images.map((image, i) => (
+                        {service.images && service.images.map((image, i) => (
                           <CarouselItem key={i}>
                             <div className="p-1">
                               <div className="h-[240px] bg-muted overflow-hidden rounded-md">
@@ -75,8 +79,12 @@ const ServicesSection = () => {
                           </CarouselItem>
                         ))}
                       </CarouselContent>
-                      <CarouselPrevious className="left-2" />
-                      <CarouselNext className="right-2" />
+                      {(service.images && service.images.length > 1) && (
+                        <>
+                          <CarouselPrevious className="left-2" />
+                          <CarouselNext className="right-2" />
+                        </>
+                      )}
                     </Carousel>
                   </div>
                 ) : (
