@@ -1,4 +1,6 @@
 
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+
 const AboutSection = () => {
   return (
     <section id="sobre" className="py-20 bg-clinic-light">
@@ -8,8 +10,8 @@ const AboutSection = () => {
             <div className="relative">
               <div className="rounded-lg h-[400px] w-[400px] bg-clinic-accent/20 absolute -bottom-4 -right-4"></div>
               <img 
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                alt="Nossa clínica" 
+                src="/lovable-uploads/60ade7f1-132b-4fdf-ad58-89b2aa18fa5c.png" 
+                alt="Dra. Camila Vieira" 
                 className="rounded-lg h-[400px] w-full object-cover shadow-lg relative"
               />
             </div>
@@ -17,14 +19,14 @@ const AboutSection = () => {
           
           <div className="w-full md:w-1/2">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-clinic-dark mb-6">
-              Sobre a <span className="text-clinic-accent">Bella Estética</span>
+              Sobre a <span className="text-clinic-accent">Dra. Camila Vieira</span>
             </h2>
             <div className="h-1 w-20 bg-clinic-accent mb-6"></div>
             <p className="text-gray-600 mb-6 text-lg">
-              Fundada em 2015, nossa clínica nasceu do sonho de oferecer tratamentos estéticos de alta qualidade, com a melhor tecnologia disponível no mercado e profissionais altamente qualificados.
+              Dra. Camila Vieira é especialista em procedimentos estéticos avançados, com formação e treinamento nas técnicas mais modernas do mercado.
             </p>
             <p className="text-gray-600 mb-6 text-lg">
-              Nossa missão é realçar sua beleza natural, promovendo autoestima e bem-estar através de procedimentos seguros e resultados evidentes desde a primeira sessão.
+              Com anos de experiência na área de estética, a Dra. Camila dedica-se a realçar a beleza natural de seus pacientes, promovendo autoestima e bem-estar através de procedimentos seguros e com resultados evidentes desde a primeira sessão.
             </p>
             
             <div className="grid grid-cols-2 gap-6 mt-8">
