@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Syringe, Lips, Hair } from "lucide-react";
+import { Syringe, Lips, Scissors } from "lucide-react";
 
 const services = [
   {
@@ -14,7 +14,7 @@ const services = [
     description: "Tratamento que suaviza linhas de expressão e rugas, proporcionando um aspecto mais jovem e natural para a pele."
   },
   {
-    icon: <Hair className="w-10 h-10 text-clinic-accent" />,
+    icon: <Scissors className="w-10 h-10 text-clinic-accent" />,
     title: "Tratamento Capilar",
     description: "Terapias avançadas para fortalecer os fios, reduzir a queda e promover o crescimento saudável dos cabelos."
   }
