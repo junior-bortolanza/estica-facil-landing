@@ -59,20 +59,20 @@ const AboutSection = () => {
             
             <div className="grid grid-cols-2 gap-6 mt-8">
               <div className="text-center">
-                <p className="text-4xl font-bold text-[#6B7763] mb-2">+5000</p>
+                <p className="text-4xl font-bold text-[#6B7763] mb-2">+1000</p>
                 <p className="text-gray-600">Clientes Satisfeitos</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-bold text-[#6B7763] mb-2">15</p>
-                <p className="text-gray-600">Especialistas</p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl font-bold text-[#6B7763] mb-2">20+</p>
+                <p className="text-4xl font-bold text-[#6B7763] mb-2">+10</p>
                 <p className="text-gray-600">Tratamentos</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-bold text-[#6B7763] mb-2">8</p>
+                <p className="text-4xl font-bold text-[#6B7763] mb-2">3</p>
                 <p className="text-gray-600">Anos de Experiência</p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl font-bold text-[#6B7763] mb-2">8</p>
+                <p className="text-gray-600">Especialistas</p>
               </div>
             </div>
           </div>

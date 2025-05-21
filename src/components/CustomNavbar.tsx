@@ -20,6 +20,14 @@ const CustomNavbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -41,50 +49,50 @@ const CustomNavbar = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex space-x-6 items-center">
-            <Link
-              to="/#inicio"
+            <button
+              onClick={() => scrollToSection('inicio')}
               className={`font-medium hover:text-[#D2CAC8] transition-colors ${
                 isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
               }`}
             >
               Início
-            </Link>
-            <Link
-              to="/#servicos"
+            </button>
+            <button
+              onClick={() => scrollToSection('servicos')}
               className={`font-medium hover:text-[#D2CAC8] transition-colors ${
                 isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
               }`}
             >
               Serviços
-            </Link>
-            <Link
-              to="/#sobre"
+            </button>
+            <button
+              onClick={() => scrollToSection('sobre')}
               className={`font-medium hover:text-[#D2CAC8] transition-colors ${
                 isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
               }`}
             >
               Sobre
-            </Link>
-            <Link
-              to="/#depoimentos"
+            </button>
+            <button
+              onClick={() => scrollToSection('depoimentos')}
               className={`font-medium hover:text-[#D2CAC8] transition-colors ${
                 isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
               }`}
             >
               Depoimentos
-            </Link>
-            <Link
-              to="/#contato"
+            </button>
+            <button
+              onClick={() => scrollToSection('agendar')}
               className={`font-medium hover:text-[#D2CAC8] transition-colors ${
                 isSticky ? "text-[#6B7763]" : "text-[#6B7763]"
               }`}
             >
               Contato
-            </Link>
+            </button>
             <Button 
               variant="outline"
               className="border-[#6B7763] text-[#6B7763] hover:bg-[#6B7763] hover:text-white transition-colors font-medium"
-              onClick={() => window.location.href = '/#contato'}
+              onClick={() => scrollToSection('agendar')}
             >
               Agendar consulta
             </Button>
@@ -119,48 +127,40 @@ const CustomNavbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4">
             <div className="flex flex-col space-y-3">
-              <Link
-                to="/#inicio"
+              <button
+                onClick={() => scrollToSection('inicio')}
                 className="text-[#6B7763] font-medium hover:text-[#D2CAC8] transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Início
-              </Link>
-              <Link
-                to="/#servicos"
+              </button>
+              <button
+                onClick={() => scrollToSection('servicos')}
                 className="text-[#6B7763] font-medium hover:text-[#D2CAC8] transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Serviços
-              </Link>
-              <Link
-                to="/#sobre"
+              </button>
+              <button
+                onClick={() => scrollToSection('sobre')}
                 className="text-[#6B7763] font-medium hover:text-[#D2CAC8] transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Sobre
-              </Link>
-              <Link
-                to="/#depoimentos"
+              </button>
+              <button
+                onClick={() => scrollToSection('depoimentos')}
                 className="text-[#6B7763] font-medium hover:text-[#D2CAC8] transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Depoimentos
-              </Link>
-              <Link
-                to="/#contato"
+              </button>
+              <button
+                onClick={() => scrollToSection('agendar')}
                 className="text-[#6B7763] font-medium hover:text-[#D2CAC8] transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contato
-              </Link>
+              </button>
               <Button 
                 variant="outline"
                 className="border-[#6B7763] text-[#6B7763] hover:bg-[#6B7763] hover:text-white transition-colors font-medium w-full"
-                onClick={() => {
-                  window.location.href = '/#contato';
-                  setIsMobileMenuOpen(false);
-                }}
+                onClick={() => scrollToSection('agendar')}
               >
                 Agendar consulta
               </Button>
