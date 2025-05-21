@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
 
 const treatmentOptions = [
   "Preenchimento Facial",
@@ -19,8 +18,6 @@ const treatmentOptions = [
 ];
 
 const ContactForm = () => {
-  const { toast } = useToast();
-  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,13 +37,16 @@ const ContactForm = () => {
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would normally send the form data to your backend
-    console.log("Form submitted with:", formData);
     
-    toast({
-      title: "Agendamento recebido!",
-      description: "Entraremos em contato em breve para confirmar sua consulta.",
-    });
+    // Format message for WhatsApp
+    const whatsappNumber = "5515996978807";
+    const treatmentText = formData.treatment ? `\nTratamento de interesse: ${formData.treatment}` : "";
+    const messageText = formData.message ? `\nMensagem: ${formData.message}` : "";
+    
+    const whatsappMessage = `Olá! Meu nome é ${formData.name}.${treatmentText}${messageText}\n\nTelefone: ${formData.phone}\nEmail: ${formData.email}`;
+    
+    // Open WhatsApp with pre-filled message
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
     
     // Reset form
     setFormData({
@@ -68,7 +68,7 @@ const ContactForm = () => {
             </h2>
             <div className="h-1 w-20 bg-[#6B7763] mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-xl mx-auto">
-              Preencha o formulário abaixo e nossa equipe entrará em contato para confirmar seu agendamento.
+              Preencha o formulário abaixo para entrar em contato via WhatsApp.
             </p>
           </div>
           
@@ -147,7 +147,7 @@ const ContactForm = () => {
                   type="submit" 
                   className="w-full bg-[#6B7763] hover:bg-[#6B7763]/90 text-white font-medium py-6 text-lg"
                 >
-                  Solicitar Agendamento
+                  Enviar pelo WhatsApp
                 </Button>
               </div>
             </div>
