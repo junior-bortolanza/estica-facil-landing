@@ -1,5 +1,5 @@
 
-import Navbar from "@/components/Navbar";
+import CustomNavbar from "@/components/CustomNavbar";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-white font-sans">
-      <Navbar />
+      <CustomNavbar />
       <HeroSection />
       <ServicesSection />
       <AboutSection />
