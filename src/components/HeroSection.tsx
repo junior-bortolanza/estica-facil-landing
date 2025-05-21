@@ -27,10 +27,10 @@ const HeroSection = () => {
               Realce sua <span className="text-[#6B7763]">beleza natural</span> com sutileza
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-4 max-w-xl">
-              Enhance your identity with subtlety, balance and sophistication.
+              Valorize sua identidade com sutileza, equilíbrio e sofisticação.
             </p>
             <p className="text-gray-600 mb-8 max-w-xl">
-              Facial harmonisation is an invitation to take care of yourself, gently enhancing your features and respecting your individuality. Technique and sensitivity come together to enhance your beauty in a light and natural way.
+              A harmonização facial é um convite para cuidar de si, realçando suavemente seus traços e respeitando sua individualidade. Técnica e sensibilidade se unem para valorizar sua beleza de forma leve e natural.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
