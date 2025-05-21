@@ -8,7 +8,7 @@ const testimonials = [
     role: "Cliente",
     content: "Pessoa maravilhosa, super atenciosa. Passa uma calma na hora do procedimento que faz a gente se sentir seguro e acolhido. Super indico",
     timeAgo: "4 semanas atrás",
-    image: "https://lh3.googleusercontent.com/a-/ALV-UjVIXnZwfHEizNoNdvzvtJYALIlmt-5uhqX2u8tDGBZhLQ=w60-h60-p-rp-mo-br100"
+    image: "/lovable-uploads/678653db-c4ec-4a09-9a8d-ceb9efd762a9.png"
   },
   {
     name: "Heloisa Oliveira Barnabé",
