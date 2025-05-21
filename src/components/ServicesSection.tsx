@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Syringe, Sparkles, ZapIcon, Heart, CircleEllipsis } from "lucide-react";
+import { Sparkles, ZapIcon, Heart, CircleEllipsis } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { cn } from "@/lib/utils";
@@ -64,13 +64,13 @@ const ServicesSection = () => {
                         {service.images.map((image, i) => (
                           <CarouselItem key={i}>
                             <div className="p-1">
-                              <AspectRatio ratio={4/3} className="bg-muted">
+                              <div className="h-[240px] bg-muted overflow-hidden rounded-md">
                                 <img 
                                   src={image} 
                                   alt={`${service.title} - Imagem ${i+1}`} 
-                                  className="rounded-md object-cover w-full h-full"
+                                  className="object-contain w-full h-full"
                                 />
-                              </AspectRatio>
+                              </div>
                             </div>
                           </CarouselItem>
                         ))}
