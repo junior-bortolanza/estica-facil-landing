@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const testimonials = [
   {
@@ -66,13 +67,27 @@ const TestimonialsSection = () => {
             <Card className="border border-gray-100 shadow-lg">
               <CardContent className="pt-10">
                 <div className="flex flex-col items-center text-center p-6">
-                  <div className="w-20 h-20 rounded-full overflow-hidden mb-6">
-                    <img 
-                      src={testimonials[activeIndex].image} 
-                      alt={testimonials[activeIndex].name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  {activeIndex === 2 ? (
+                    // Usar Avatar (perfeitamente redondo) para Gisele
+                    <div className="mb-6">
+                      <Avatar className="w-20 h-20">
+                        <AvatarImage 
+                          src={testimonials[activeIndex].image}
+                          alt={testimonials[activeIndex].name}
+                        />
+                        <AvatarFallback>{testimonials[activeIndex].name.charAt(0)}</AvatarFallback>
+                      </Avatar>
+                    </div>
+                  ) : (
+                    // Manter o estilo original para os outros depoimentos
+                    <div className="w-20 h-20 rounded-full overflow-hidden mb-6">
+                      <img 
+                        src={testimonials[activeIndex].image} 
+                        alt={testimonials[activeIndex].name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700" stroke="#FFD700" strokeWidth="1" className="mx-0.5">
