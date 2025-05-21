@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <h1 className="font-serif text-2xl font-bold text-clinic-dark">
-            <span className="text-clinic-accent">Dra Camila</span> Vieira
+            <span className="text-clinic-accent">Bella</span> Estética
           </h1>
         </div>
         
@@ -41,7 +41,7 @@ const Navbar = () => {
         
         <Button 
           variant="default" 
-          className="hidden md:block bg-clinic-accent hover:bg-clinic-dark text-white"
+          className="hidden md:block bg-clinic-accent hover:bg-clinic-accent/90 text-white"
           onClick={() => document.getElementById('agendar')?.scrollIntoView({ behavior: 'smooth' })}
         >
           Agendar Consulta

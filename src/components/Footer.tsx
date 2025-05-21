@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
             <h3 className="font-serif text-xl font-bold mb-6">
-              <span className="text-clinic-accent">Dra Camila</span> Vieira
+              <span className="text-clinic-accent">Bella</span> Estética
             </h3>
             <p className="mb-4 text-gray-300">
               Realçando sua beleza natural com tratamentos personalizados e resultados surpreendentes.
@@ -51,7 +51,7 @@ const Footer = () => {
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
-                <p className="text-gray-300">contato@dracamilavieira.com</p>
+                <p className="text-gray-300">contato@bellaestetica.com</p>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 pt-8">
           <p className="text-center text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Dra Camila Vieira. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Bella Estética. Todos os direitos reservados.
           </p>
         </div>
       </div>

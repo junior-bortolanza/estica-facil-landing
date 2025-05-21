@@ -1,32 +1,22 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Syringe, Droplet, Microscope, Zap } from "lucide-react";
+import { Syringe, Lips, Hair } from "lucide-react";
 
 const services = [
+  {
+    icon: <Lips className="w-10 h-10 text-clinic-accent" />,
+    title: "Preenchimento Labial",
+    description: "Procedimento que proporciona volume e contorno aos lábios, criando um aspecto mais harmonioso e jovial ao rosto."
+  },
   {
     icon: <Syringe className="w-10 h-10 text-clinic-accent" />,
     title: "Botox",
     description: "Tratamento que suaviza linhas de expressão e rugas, proporcionando um aspecto mais jovem e natural para a pele."
   },
   {
-    icon: <Droplet className="w-10 h-10 text-clinic-accent" />,
-    title: "Preenchimentos Faciais",
-    description: "Labial, olheira, mento, malar, mandíbula e rinomodelação para harmonização e volumes faciais."
-  },
-  {
-    icon: <Microscope className="w-10 h-10 text-clinic-accent" />,
-    title: "Bioestimulador de Colágeno",
-    description: "Tratamentos que estimulam a produção natural de colágeno para melhorar a firmeza e elasticidade da pele."
-  },
-  {
-    icon: <Droplet className="w-10 h-10 text-clinic-accent" />,
-    title: "Microagulhamento",
-    description: "Procedimento que estimula a renovação celular e a produção de colágeno através de micro perfurações na pele."
-  },
-  {
-    icon: <Zap className="w-10 h-10 text-clinic-accent" />,
-    title: "Tecnologias",
-    description: "Ultraformer e Lavieen, tecnologias avançadas para tratamentos faciais e corporais com resultados superiores."
+    icon: <Hair className="w-10 h-10 text-clinic-accent" />,
+    title: "Tratamento Capilar",
+    description: "Terapias avançadas para fortalecer os fios, reduzir a queda e promover o crescimento saudável dos cabelos."
   }
 ];
 
@@ -44,7 +34,7 @@ const ServicesSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow border border-gray-100 text-center">
               <CardHeader className="flex flex-col items-center">
