@@ -23,7 +23,7 @@ const testimonials = [
     role: "Cliente",
     content: "A dra Camila fez meu primeiro botox e eu amei!!! Muito cuidadosa e atenciosa no atendimento pós procedimento, voltarei em breve.",
     timeAgo: "3 semanas atrás",
-    image: "https://lh3.googleusercontent.com/a-/ALV-UjV-Av1MwiREQ5qbhKfq_Z_WzLRiyHzgkFu8E-XfQsxvi4M=w60-h60-p-rp-mo-br100"
+    image: "/lovable-uploads/e2420d6d-758a-42a3-84cb-0220790e1cb3.png"
   },
   {
     name: "Viviane Alexandre",
