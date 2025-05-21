@@ -109,7 +109,7 @@ const TestimonialsSection = () => {
           
           <div className="text-center mt-8">
             <a 
-              href="https://g.co/kgs/xdrUxKW" 
+              href="https://g.page/r/CV8CSAFCE68zEAE/review" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center text-[#6B7763] hover:underline"
