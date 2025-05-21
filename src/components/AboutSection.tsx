@@ -21,16 +21,16 @@ const AboutSection = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-10 md:mb-0 md:pr-10">
             <div className="relative">
-              <div className="rounded-lg h-[500px] w-[500px] bg-[#6B7763]/20 absolute -bottom-4 -right-4"></div>
-              <Carousel className="w-[500px] h-[500px] rounded-lg shadow-lg">
+              <div className="rounded-lg h-[600px] w-[600px] bg-[#6B7763]/20 absolute -bottom-4 -right-4"></div>
+              <Carousel className="w-[600px] h-[600px] rounded-lg shadow-lg">
                 <CarouselContent>
                   {doctorImages.map((image, index) => (
                     <CarouselItem key={index}>
-                      <div className="overflow-hidden rounded-lg h-[500px]">
+                      <div className="overflow-hidden rounded-lg h-[600px]">
                         <img 
                           src={image} 
                           alt="Dra. Camila Vieira" 
-                          className="h-full w-full object-cover" 
+                          className="h-full w-full object-contain" 
                         />
                       </div>
                     </CarouselItem>
@@ -69,10 +69,6 @@ const AboutSection = () => {
               <div className="text-center">
                 <p className="text-4xl font-bold text-[#6B7763] mb-2">3</p>
                 <p className="text-gray-600">Anos de Experiência</p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl font-bold text-[#6B7763] mb-2">8</p>
-                <p className="text-gray-600">Especialistas</p>
               </div>
             </div>
           </div>
