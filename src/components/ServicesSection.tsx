@@ -27,9 +27,13 @@ const services = [
     description: "Técnica que estimula a renovação celular e produção de colágeno através de micro perfurações na pele."
   },
   {
+    type: "carousel",
     icon: <ZapIcon className="w-10 h-10 text-[#6B7763]" />,
     title: "Tecnologias",
-    description: "Ultraformer e Lavieen: equipamentos avançados para lifting não-cirúrgico e rejuvenescimento da pele."
+    description: "Ultraformer e Lavieen: equipamentos avançados para lifting não-cirúrgico e rejuvenescimento da pele.",
+    images: [
+      "/lovable-uploads/67bed94e-6815-4e80-834a-5d305e27b63a.png"
+    ]
   },
   {
     type: "carousel",
