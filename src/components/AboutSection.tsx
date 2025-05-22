@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 
 const doctorImages = [
+  "/lovable-uploads/75ec6e9a-ee8f-41d9-81ee-2b91551e87dd.png",
   "/lovable-uploads/08fd2600-a2f4-4055-99e5-d16243823cf4.png",
   "/lovable-uploads/44674b1d-adf0-484b-b436-2b694be021b3.png",
   "/lovable-uploads/6ebe149a-e60d-4aed-b8dd-77f3714d117b.png"
