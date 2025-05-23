@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Sparkles, ZapIcon, Heart, CircleEllipsis, Rabbit } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -12,7 +13,6 @@ const services = [
     images: [
       "/lovable-uploads/a2733afa-3d27-4730-adfc-f94ec160e199.png",
       "/lovable-uploads/03030892-ce61-4931-953c-99df627a52e3.png",
-      "/lovable-uploads/c41d1c91-f3ed-42e4-a276-cf58fea589a8.png",
       "/lovable-uploads/b2841c5b-2628-4740-8ed6-95f2f59c5181.png"
     ]
   },
