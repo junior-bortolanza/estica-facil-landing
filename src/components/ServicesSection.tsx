@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sparkles, ZapIcon, Heart, CircleEllipsis } from "lucide-react";
+import { Sparkles, ZapIcon, Heart, CircleEllipsis, Rabbit } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { cn } from "@/lib/utils";
@@ -18,6 +18,11 @@ const services = [
       "/lovable-uploads/c41d1c91-f3ed-42e4-a276-cf58fea589a8.png",
       "/lovable-uploads/b2841c5b-2628-4740-8ed6-95f2f59c5181.png"
     ]
+  },
+  {
+    icon: <Sparkles className="w-10 h-10 text-[#6B7763]" />,
+    title: "Toxina Botulínica (Botox)",
+    description: "Tratamento para suavizar linhas de expressão, rugas e prevenir o envelhecimento, com resultados naturais e duradouros."
   },
   {
     icon: <Sparkles className="w-10 h-10 text-[#6B7763]" />,
