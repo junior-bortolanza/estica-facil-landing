@@ -11,18 +11,25 @@ const services = [
     title: "Preenchimentos Faciais",
     description: "Labial, olheira, mento, malar, mandíbula, rinomodelação para harmonização e rejuvenescimento facial.",
     images: [
-      "/lovable-uploads/ff7181dd-2445-4e45-8c15-446ba8b3baa9.png", // Adicionando a nova imagem de preenchimento labial
-      "/lovable-uploads/a6a1b22e-c437-433b-93e5-02157d457970.png", // Adicionando a nova imagem de preenchimento facial (antes/depois)
-      "/lovable-uploads/a2733afa-3d27-4730-adfc-f94ec160e199.png", // Adicionando a nova imagem de preenchimento facial (antes/depois)
+      "/lovable-uploads/ff7181dd-2445-4e45-8c15-446ba8b3baa9.png",
+      "/lovable-uploads/a6a1b22e-c437-433b-93e5-02157d457970.png",
+      "/lovable-uploads/a2733afa-3d27-4730-adfc-f94ec160e199.png",
       "/lovable-uploads/03030892-ce61-4931-953c-99df627a52e3.png",
       "/lovable-uploads/c41d1c91-f3ed-42e4-a276-cf58fea589a8.png",
       "/lovable-uploads/b2841c5b-2628-4740-8ed6-95f2f59c5181.png"
     ]
   },
   {
+    type: "carousel",
     icon: <Sparkles className="w-10 h-10 text-[#6B7763]" />,
     title: "Toxina Botulínica (Botox)",
-    description: "Tratamento para suavizar linhas de expressão, rugas e prevenir o envelhecimento, com resultados naturais e duradouros."
+    description: "Tratamento para suavizar linhas de expressão, rugas e prevenir o envelhecimento, com resultados naturais e duradouros.",
+    images: [
+      "/lovable-uploads/6c642fab-e2c3-4f9a-8632-0f1a2121e584.png",
+      "/lovable-uploads/8b195910-b113-48f9-97e6-b20a8f9b3e16.png",
+      "/lovable-uploads/485c6556-c243-469a-a9bf-5014e0fbf340.png",
+      "/lovable-uploads/4d51f184-f4fe-4470-8489-a51571128183.png"
+    ]
   },
   {
     icon: <Sparkles className="w-10 h-10 text-[#6B7763]" />,
