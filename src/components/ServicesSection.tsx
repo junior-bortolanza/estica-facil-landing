@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Sparkles, ZapIcon, Heart, CircleEllipsis, Rabbit } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -11,7 +10,6 @@ const services = [
     title: "Preenchimentos Faciais",
     description: "Labial, olheira, mento, malar, mandíbula, rinomodelação para harmonização e rejuvenescimento facial.",
     images: [
-      "/lovable-uploads/a2733afa-3d27-4730-adfc-f94ec160e199.png",
       "/lovable-uploads/03030892-ce61-4931-953c-99df627a52e3.png",
       "/lovable-uploads/b2841c5b-2628-4740-8ed6-95f2f59c5181.png"
     ]
