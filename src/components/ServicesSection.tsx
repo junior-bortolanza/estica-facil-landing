@@ -1,8 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sparkles, ZapIcon, Heart, CircleEllipsis, Rabbit } from "lucide-react";
+import { Sparkles, ZapIcon, Heart, CircleEllipsis, Rabbit, Eye, ChevronLeft, ChevronRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 const services = [
   {
@@ -57,6 +60,8 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <section id="servicos" className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-8">
@@ -72,42 +77,79 @@ const ServicesSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className={cn("hover:shadow-lg transition-shadow border border-gray-100", 
+            <Card key={index} className={cn("group hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#6B7763]/20", 
               service.type === "carousel" ? "text-center overflow-hidden" : "text-center")}>
               <CardHeader className="flex flex-col items-center">
                 {service.type === "carousel" ? (
-                  <div className="w-full mb-4">
+                  <div className="w-full mb-4 relative">
                     <Carousel className="w-full">
                       <CarouselContent>
                         {service.images && service.images.map((image, i) => (
                           <CarouselItem key={i}>
-                            <div className="p-1">
-                              <div className="h-[240px] bg-muted overflow-hidden rounded-md">
+                            <div className="relative group/image">
+                              <AspectRatio ratio={4/3}>
                                 <img 
                                   src={image} 
-                                  alt={`${service.title} - Imagem ${i+1}`} 
-                                  className="object-contain w-full h-full"
+                                  alt={`${service.title} - Resultado ${i+1}`} 
+                                  className="object-cover w-full h-full rounded-lg shadow-md transition-transform duration-300 group-hover/image:scale-105"
                                 />
-                              </div>
+                                <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-all duration-300 rounded-lg flex items-center justify-center">
+                                  <Dialog>
+                                    <DialogTrigger asChild>
+                                      <Button
+                                        variant="secondary"
+                                        size="sm"
+                                        className="opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 bg-white/90 hover:bg-white text-[#6B7763] shadow-lg"
+                                        onClick={() => setSelectedImage(image)}
+                                      >
+                                        <Eye className="w-4 h-4 mr-2" />
+                                        Ver Ampliado
+                                      </Button>
+                                    </DialogTrigger>
+                                    <DialogContent className="max-w-4xl">
+                                      <div className="relative">
+                                        <img 
+                                          src={image} 
+                                          alt={`${service.title} - Resultado ${i+1}`}
+                                          className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+                                        />
+                                      </div>
+                                    </DialogContent>
+                                  </Dialog>
+                                </div>
+                              </AspectRatio>
                             </div>
                           </CarouselItem>
                         ))}
                       </CarouselContent>
                       {(service.images && service.images.length > 1) && (
                         <>
-                          <CarouselPrevious className="left-2" />
-                          <CarouselNext className="right-2" />
+                          <CarouselPrevious className="left-2 bg-white/80 hover:bg-white text-[#6B7763] shadow-lg border-[#6B7763]/20" />
+                          <CarouselNext className="right-2 bg-white/80 hover:bg-white text-[#6B7763] shadow-lg border-[#6B7763]/20" />
                         </>
                       )}
                     </Carousel>
+                    {service.images && service.images.length > 1 && (
+                      <div className="flex justify-center mt-3 space-x-2">
+                        {service.images.map((_, i) => (
+                          <div key={i} className="w-2 h-2 rounded-full bg-gray-300"></div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ) : (
-                  <div className="mb-4">{service.icon}</div>
+                  <div className="mb-4 p-6 rounded-full bg-[#6B7763]/5 group-hover:bg-[#6B7763]/10 transition-colors duration-300">
+                    {service.icon}
+                  </div>
                 )}
-                <CardTitle className="text-xl font-serif text-[#6B7763]">{service.title}</CardTitle>
+                <CardTitle className="text-xl font-serif text-[#6B7763] group-hover:text-[#5a6659] transition-colors duration-300">
+                  {service.title}
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600">{service.description}</CardDescription>
+                <CardDescription className="text-gray-600 leading-relaxed">
+                  {service.description}
+                </CardDescription>
               </CardContent>
             </Card>
           ))}
