@@ -92,6 +92,13 @@ const ServicesSection = () => {
                                   src={image} 
                                   alt={`${service.title} - Resultado ${i+1}`} 
                                   className="object-cover w-full h-full rounded-lg shadow-md transition-transform duration-300 group-hover/image:scale-105"
+                                  style={{ 
+                                    imageRendering: 'crisp-edges',
+                                    filter: 'contrast(1.05) saturate(1.1) brightness(1.05)',
+                                  }}
+                                  loading="lazy"
+                                  decoding="async"
+                                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 />
                                 <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-all duration-300 rounded-lg flex items-center justify-center">
                                   <Dialog>
@@ -106,12 +113,16 @@ const ServicesSection = () => {
                                         Ver Ampliado
                                       </Button>
                                     </DialogTrigger>
-                                    <DialogContent className="max-w-4xl">
-                                      <div className="relative">
+                                    <DialogContent className="max-w-5xl p-0">
+                                      <div className="relative bg-black rounded-lg">
                                         <img 
                                           src={image} 
                                           alt={`${service.title} - Resultado ${i+1}`}
-                                          className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+                                          className="w-full h-auto max-h-[90vh] object-contain"
+                                          style={{
+                                            imageRendering: 'crisp-edges',
+                                            filter: 'contrast(1.05) saturate(1.1)',
+                                          }}
                                         />
                                       </div>
                                     </DialogContent>
