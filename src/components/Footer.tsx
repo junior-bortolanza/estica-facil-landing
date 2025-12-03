@@ -1,80 +1,112 @@
 
+import { Phone, Mail, Clock, Star, MapPin } from "lucide-react";
+
 const Footer = () => {
   return (
-    <footer id="contato" className="bg-[#6B7763] text-white pt-16 pb-8">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div>
+    <footer id="contato" className="bg-[#6B7763] text-white">
+      {/* Main footer content */}
+      <div className="container mx-auto px-4 md:px-8 py-16 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          {/* Brand */}
+          <div className="lg:col-span-1">
             <div className="mb-6">
               <img 
                 src="/lovable-uploads/a5b8fc4e-66e6-44a2-8123-431093bf418b.png" 
                 alt="Dra. Camila Vieira Logo" 
-                className="h-16"
+                className="h-14"
               />
             </div>
-            <p className="mb-4 text-gray-100">
+            <p className="text-white/80 leading-relaxed text-sm">
               Realçando sua beleza natural com tratamentos personalizados e resultados surpreendentes.
             </p>
           </div>
           
+          {/* Contact */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Contato</h4>
+            <h4 className="font-serif font-semibold text-lg mb-6 tracking-tight">Contato</h4>
             <div className="space-y-4">
-              <div className="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-3 mt-1 text-[#D2CAC8]">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                <p className="text-gray-100">(15) 99697-8807</p>
-              </div>
+              <a 
+                href="tel:+5515996978807" 
+                className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                  <Phone className="w-4 h-4" strokeWidth={1.5} />
+                </div>
+                <span className="text-sm">(15) 99697-8807</span>
+              </a>
               
-              <div className="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-3 mt-1 text-[#D2CAC8]">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                <p className="text-gray-100">camila_22_96@hotmail.com</p>
+              <a 
+                href="mailto:camila_22_96@hotmail.com"
+                className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                  <Mail className="w-4 h-4" strokeWidth={1.5} />
+                </div>
+                <span className="text-sm">camila_22_96@hotmail.com</span>
+              </a>
+            </div>
+          </div>
+          
+          {/* Hours */}
+          <div>
+            <h4 className="font-serif font-semibold text-lg mb-6 tracking-tight">Horário de Funcionamento</h4>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-4 h-4" strokeWidth={1.5} />
+                </div>
+                <div className="space-y-2 text-sm text-white/80">
+                  <div className="flex justify-between gap-4">
+                    <span>Segunda - Sexta</span>
+                    <span>8:00 - 12:00</span>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <span></span>
+                    <span>18:30 - 22:00</span>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <span>Sábado</span>
+                    <span>Fechado</span>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <span>Domingo</span>
+                    <span>Fechado</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           
+          {/* Google Review CTA */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Horário de Funcionamento</h4>
-            <ul className="space-y-2 text-gray-100">
-              <li className="flex justify-between">
-                <span>Segunda - Sexta</span>
-                <span>8:00 - 12:00</span>
-              </li>
-              <li className="flex justify-between">
-                <span></span>
-                <span>18:30 - 22:00</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Sábado</span>
-                <span>Fechado</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Domingo</span>
-                <span>Fechado</span>
-              </li>
-            </ul>
+            <h4 className="font-serif font-semibold text-lg mb-6 tracking-tight">Avalie-nos</h4>
+            <a 
+              href="https://g.page/r/CV8CSAFCE68zEAE/review" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 transition-colors text-sm font-medium"
+            >
+              <Star className="w-4 h-4" strokeWidth={1.5} />
+              Avalie-nos no Google
+            </a>
+            <p className="mt-4 text-xs text-white/60 leading-relaxed">
+              Sua avaliação nos ajuda a melhorar cada vez mais nossos serviços.
+            </p>
           </div>
         </div>
-        
-        <div className="border-t border-[#D2CAC8]/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-center text-[#FFFFFF]/70 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Dra. Camila Vieira. Todos os direitos reservados.
-          </p>
-          <a 
-            href="https://g.page/r/CV8CSAFCE68zEAE/review" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-white hover:text-[#D2CAC8] transition-colors flex items-center"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-            </svg>
-            Avalie-nos no Google
-          </a>
+      </div>
+      
+      {/* Bottom bar */}
+      <div className="border-t border-white/10">
+        <div className="container mx-auto px-4 md:px-8 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-white/60 text-sm">
+              © {new Date().getFullYear()} Dra. Camila Vieira. Todos os direitos reservados.
+            </p>
+            <p className="text-white/40 text-xs">
+              CRBM 54.303 | Biomédica Esteta
+            </p>
+          </div>
         </div>
       </div>
     </footer>
