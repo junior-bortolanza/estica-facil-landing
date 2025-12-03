@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Send, Instagram, Facebook } from "lucide-react";
 
 const treatmentOptions = [
   "Preenchimento Facial",
@@ -38,17 +39,14 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Format message for WhatsApp
     const whatsappNumber = "5515996978807";
     const treatmentText = formData.treatment ? `\nTratamento de interesse: ${formData.treatment}` : "";
     const messageText = formData.message ? `\nMensagem: ${formData.message}` : "";
     
     const whatsappMessage = `Olá! Meu nome é ${formData.name}.${treatmentText}${messageText}\n\nTelefone: ${formData.phone}\nEmail: ${formData.email}`;
     
-    // Open WhatsApp with pre-filled message
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
     
-    // Reset form
     setFormData({
       name: "",
       email: "",
@@ -59,23 +57,23 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="agendar" className="py-20 bg-[#D2CAC8]/20">
+    <section id="agendar" className="section-premium gradient-premium-reverse">
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#6B7763] mb-4">
+          <div className="section-header">
+            <h2 className="section-title">
               Agende Sua Consulta
             </h2>
-            <div className="h-1 w-20 bg-[#6B7763] mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-xl mx-auto">
+            <div className="section-divider" />
+            <p className="section-description">
               Preencha o formulário abaixo para entrar em contato via WhatsApp.
             </p>
           </div>
           
-          <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
+          <form onSubmit={handleSubmit} className="bg-white rounded-3xl shadow-soft-lg border border-border/50 p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="name">Nome Completo</Label>
+                <Label htmlFor="name" className="text-foreground font-medium">Nome Completo</Label>
                 <Input
                   id="name"
                   name="name"
@@ -83,11 +81,12 @@ const ContactForm = () => {
                   onChange={handleInputChange}
                   placeholder="Seu nome completo"
                   required
+                  className="h-12 rounded-xl border-border/50 focus:border-[#6B7763] focus:ring-[#6B7763]/20"
                 />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="email">E-mail</Label>
+                <Label htmlFor="email" className="text-foreground font-medium">E-mail</Label>
                 <Input
                   id="email"
                   name="email"
@@ -96,11 +95,12 @@ const ContactForm = () => {
                   onChange={handleInputChange}
                   placeholder="seu.email@exemplo.com"
                   required
+                  className="h-12 rounded-xl border-border/50 focus:border-[#6B7763] focus:ring-[#6B7763]/20"
                 />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="phone">Telefone</Label>
+                <Label htmlFor="phone" className="text-foreground font-medium">Telefone</Label>
                 <Input
                   id="phone"
                   name="phone"
@@ -108,21 +108,22 @@ const ContactForm = () => {
                   onChange={handleInputChange}
                   placeholder="(00) 00000-0000"
                   required
+                  className="h-12 rounded-xl border-border/50 focus:border-[#6B7763] focus:ring-[#6B7763]/20"
                 />
               </div>
               
               <div className="space-y-2">
-                <Label>Tratamento de Interesse</Label>
+                <Label className="text-foreground font-medium">Tratamento de Interesse</Label>
                 <Select 
                   value={formData.treatment} 
                   onValueChange={handleSelectChange}
                 >
-                  <SelectTrigger>
+                  <SelectTrigger className="h-12 rounded-xl border-border/50 focus:border-[#6B7763] focus:ring-[#6B7763]/20">
                     <SelectValue placeholder="Selecione um tratamento" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="rounded-xl">
                     {treatmentOptions.map((option) => (
-                      <SelectItem key={option} value={option}>
+                      <SelectItem key={option} value={option} className="rounded-lg">
                         {option}
                       </SelectItem>
                     ))}
@@ -131,7 +132,7 @@ const ContactForm = () => {
               </div>
               
               <div className="space-y-2 md:col-span-2">
-                <Label htmlFor="message">Mensagem (opcional)</Label>
+                <Label htmlFor="message" className="text-foreground font-medium">Mensagem (opcional)</Label>
                 <Textarea
                   id="message"
                   name="message"
@@ -139,45 +140,42 @@ const ContactForm = () => {
                   onChange={handleInputChange}
                   placeholder="Conte-nos mais sobre o que você procura ou qualquer questão específica..."
                   rows={4}
+                  className="rounded-xl border-border/50 focus:border-[#6B7763] focus:ring-[#6B7763]/20 resize-none"
                 />
               </div>
               
               <div className="md:col-span-2">
                 <Button 
                   type="submit" 
-                  className="w-full bg-[#6B7763] hover:bg-[#6B7763]/90 text-white font-medium py-6 text-lg"
+                  className="w-full bg-[#6B7763] hover:bg-[#5a6654] text-white font-medium py-6 text-base rounded-xl shadow-premium-sm hover:shadow-premium transition-all duration-300 group"
                 >
+                  <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" />
                   Enviar pelo WhatsApp
                 </Button>
               </div>
             </div>
           </form>
           
-          <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-8">
+          {/* Social links */}
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
             <a 
               href="https://www.instagram.com/dracamilavieiral/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center text-[#6B7763] hover:text-[#6B7763]/80"
+              className="flex items-center gap-3 px-6 py-3 rounded-xl bg-white shadow-soft border border-border/50 text-[#6B7763] hover:shadow-soft-lg hover:border-[#6B7763]/20 transition-all duration-300"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-              @dracamilavieiral
+              <Instagram className="w-5 h-5" strokeWidth={1.5} />
+              <span className="font-medium">@dracamilavieiral</span>
             </a>
             
             <a 
               href="https://www.facebook.com/profile.php?id=61574609272088" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center text-[#6B7763] hover:text-[#6B7763]/80"
+              className="flex items-center gap-3 px-6 py-3 rounded-xl bg-white shadow-soft border border-border/50 text-[#6B7763] hover:shadow-soft-lg hover:border-[#6B7763]/20 transition-all duration-300"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-              </svg>
-              Dra. Camila Vieira
+              <Facebook className="w-5 h-5" strokeWidth={1.5} />
+              <span className="font-medium">Dra. Camila Vieira</span>
             </a>
           </div>
         </div>
