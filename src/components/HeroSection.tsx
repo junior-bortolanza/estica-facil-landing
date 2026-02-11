@@ -19,42 +19,47 @@ const heroImages = [
 
 const HeroSection = () => {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center pt-20 pb-16 md:pt-24 md:pb-24 gradient-premium overflow-hidden">
-      <div className="absolute top-20 left-10 w-72 h-72 bg-[#6B7763]/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#D2CAC8]/20 rounded-full blur-3xl" />
+    <section id="inicio" className="relative min-h-screen flex items-center pt-24 pb-20 md:pt-28 md:pb-28 overflow-hidden" style={{ background: 'linear-gradient(170deg, hsl(25 30% 93%) 0%, hsl(0 0% 100%) 60%, hsl(25 30% 93% / 0.3) 100%)' }}>
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-20" style={{ background: 'radial-gradient(circle, hsl(38 50% 70% / 0.2) 0%, transparent 70%)' }} />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-15" style={{ background: 'radial-gradient(circle, hsl(100 12% 44% / 0.1) 0%, transparent 70%)' }} />
       
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#6B7763]/10 text-[#6B7763] text-sm font-medium mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#6B7763] animate-pulse" />
-              Biomédica Esteta | CRBM 54.303
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-[#6B7763]/15 bg-white/60 backdrop-blur-sm text-[#6B7763] text-sm font-medium mb-10 tracking-wide">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#6B7763]" />
+              Biomédica Esteta — CRBM 54.303
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-[#6B7763] leading-[1.1] tracking-tight mb-6">
-              Realce sua beleza natural com sutileza
+            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-serif font-semibold text-[#6B7763] leading-[1.08] tracking-tight mb-7">
+              Realce sua beleza com naturalidade e precisão.
             </h1>
+
+            {/* Gold divider */}
+            <div className="h-[2px] w-16 mx-auto lg:mx-0 mb-7" style={{ background: 'linear-gradient(90deg, hsl(38 50% 70%), transparent)' }} />
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Valorize sua identidade com sutileza, equilíbrio e sofisticação.
+            <p className="text-lg md:text-xl text-muted-foreground mb-5 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+              Tratamentos personalizados para harmonização facial com segurança, técnica e elegância.
             </p>
             
-            <p className="text-muted-foreground mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-muted-foreground mb-12 max-w-lg mx-auto lg:mx-0 leading-relaxed">
               A harmonização facial é um convite para cuidar de si, realçando suavemente seus traços e respeitando sua individualidade. Técnica e sensibilidade se unem para valorizar sua beleza de forma leve e natural.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
-                className="bg-[#6B7763] hover:bg-[#5a6654] text-white font-medium px-8 py-6 text-base rounded-xl shadow-premium-sm hover:shadow-premium transition-all duration-300 group"
+                className="bg-[#6B7763] hover:bg-[#5a6654] text-white font-medium px-8 py-6 text-base rounded-xl shadow-premium-sm hover:shadow-premium transition-all duration-500 group"
                 onClick={() => document.getElementById('agendar')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Agendar Consulta
+                Agendar Avaliação
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
                 variant="outline" 
-                className="border-2 border-[#6B7763]/30 text-[#6B7763] hover:bg-[#6B7763] hover:text-white hover:border-[#6B7763] font-medium px-8 py-6 text-base rounded-xl transition-all duration-300"
+                className="border border-[#6B7763]/20 text-[#6B7763] hover:bg-[#6B7763] hover:text-white hover:border-[#6B7763] font-medium px-8 py-6 text-base rounded-xl transition-all duration-500 bg-white/50 backdrop-blur-sm"
                 onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Nossos Serviços
@@ -64,10 +69,11 @@ const HeroSection = () => {
           
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="relative">
-              <div className="absolute -inset-4 rounded-3xl border-2 border-[#6B7763]/10 -rotate-3" />
-              <div className="absolute -inset-8 rounded-3xl border border-[#D2CAC8]/20 rotate-2" />
+              {/* Decorative frame with gold accent */}
+              <div className="absolute -inset-3 rounded-[1.5rem] border border-[#6B7763]/8 -rotate-2" />
+              <div className="absolute -inset-6 rounded-[1.75rem] border border-[hsl(38,50%,70%)]/15 rotate-1" />
               
-              <Carousel className="w-full max-w-[450px] rounded-2xl overflow-hidden shadow-premium">
+              <Carousel className="w-full max-w-[480px] rounded-2xl overflow-hidden shadow-premium">
                 <CarouselContent>
                   {heroImages.map((image, index) => (
                     <CarouselItem key={index}>

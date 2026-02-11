@@ -41,7 +41,7 @@ const CustomNavbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isSticky
-          ? "bg-white/95 backdrop-blur-md shadow-soft py-3"
+          ? "bg-white/95 backdrop-blur-xl shadow-soft py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -62,17 +62,17 @@ const CustomNavbar = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="px-4 py-2 text-sm font-medium text-[#6B7763] hover:text-[#6B7763]/70 hover:bg-[#6B7763]/5 rounded-lg transition-all duration-200"
+                className="px-4 py-2 text-sm font-medium text-[#6B7763]/80 hover:text-[#6B7763] hover:bg-[#6B7763]/5 rounded-lg transition-all duration-200 tracking-wide"
               >
                 {link.label}
               </button>
             ))}
-            <div className="ml-4">
+            <div className="ml-6">
               <Button 
-                className="bg-[#6B7763] hover:bg-[#5a6654] text-white font-medium px-6 py-2 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                className="bg-[#6B7763] hover:bg-[#5a6654] text-white font-medium px-6 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 text-sm"
                 onClick={() => scrollToSection('agendar')}
               >
-                Agendar consulta
+                Agendar Avaliação
               </Button>
             </div>
           </div>
@@ -97,8 +97,8 @@ const CustomNavbar = () => {
             isMobileMenuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="bg-white rounded-2xl shadow-soft-lg p-6 border border-border/50">
-            <div className="flex flex-col gap-2">
+          <div className="bg-white rounded-2xl shadow-soft-lg p-6 border border-border/30">
+            <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
@@ -108,12 +108,12 @@ const CustomNavbar = () => {
                   {link.label}
                 </button>
               ))}
-              <div className="pt-4 mt-2 border-t border-border">
+              <div className="pt-4 mt-2 border-t border-border/50">
                 <Button 
                   className="bg-[#6B7763] hover:bg-[#5a6654] text-white font-medium w-full py-6 rounded-xl"
                   onClick={() => scrollToSection('agendar')}
                 >
-                  Agendar consulta
+                  Agendar Avaliação
                 </Button>
               </div>
             </div>
