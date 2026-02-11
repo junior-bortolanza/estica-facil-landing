@@ -4,7 +4,6 @@ import { Phone, Mail, Clock, Star, MapPin } from "lucide-react";
 const Footer = () => {
   return (
     <footer id="contato" className="bg-[#6B7763] text-white">
-      {/* Main footer content */}
       <div className="container mx-auto px-4 md:px-8 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
@@ -16,9 +15,10 @@ const Footer = () => {
                 className="h-14"
               />
             </div>
-            <p className="text-white/80 leading-relaxed text-sm">
+            <p className="text-white/70 leading-relaxed text-sm mb-4">
               Realçando sua beleza natural com tratamentos personalizados e resultados surpreendentes.
             </p>
+            <div className="h-[1px] w-10" style={{ background: 'linear-gradient(90deg, hsl(38 50% 70% / 0.5), transparent)' }} />
           </div>
           
           {/* Contact */}
@@ -27,9 +27,9 @@ const Footer = () => {
             <div className="space-y-4">
               <a 
                 href="tel:+5515996978807" 
-                className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group"
+                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group"
               >
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                   <Phone className="w-4 h-4" strokeWidth={1.5} />
                 </div>
                 <span className="text-sm">(15) 99697-8807</span>
@@ -37,9 +37,9 @@ const Footer = () => {
               
               <a 
                 href="mailto:camila_22_96@hotmail.com"
-                className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group"
+                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors group"
               >
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                   <Mail className="w-4 h-4" strokeWidth={1.5} />
                 </div>
                 <span className="text-sm">camila_22_96@hotmail.com</span>
@@ -52,10 +52,10 @@ const Footer = () => {
             <h4 className="font-serif font-semibold text-lg mb-6 tracking-tight">Horário de Funcionamento</h4>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
                   <Clock className="w-4 h-4" strokeWidth={1.5} />
                 </div>
-                <div className="space-y-2 text-sm text-white/80">
+                <div className="space-y-2 text-sm text-white/70">
                   <div className="flex justify-between gap-4">
                     <span>Segunda - Sexta</span>
                     <span>8:00 - 12:00</span>
@@ -89,7 +89,7 @@ const Footer = () => {
               <Star className="w-4 h-4" strokeWidth={1.5} />
               Avalie-nos no Google
             </a>
-            <p className="mt-4 text-xs text-white/60 leading-relaxed">
+            <p className="mt-4 text-xs text-white/50 leading-relaxed">
               Sua avaliação nos ajuda a melhorar cada vez mais nossos serviços.
             </p>
           </div>
@@ -100,10 +100,10 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 md:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/60 text-sm">
+            <p className="text-white/50 text-sm">
               © {new Date().getFullYear()} Dra. Camila Vieira. Todos os direitos reservados.
             </p>
-            <p className="text-white/40 text-xs">
+            <p className="text-white/35 text-xs">
               CRBM 54.303 | Biomédica Esteta
             </p>
           </div>
